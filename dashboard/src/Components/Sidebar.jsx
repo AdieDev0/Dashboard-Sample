@@ -52,40 +52,42 @@ const Sidebar = () => {
             )}
           </div>
         </div>
-        {isDropdownOpen && (
-          <ul className="pl-6 mt-1 space-y-1">
-            <li>
-              <a className="text-xs flex justify-between p-1 cursor-pointer">
-                Orders
-              </a>
-            </li>
-            <li>
-              <a className="text-xs flex justify-between p-1 cursor-pointer">
-                Order Details
-              </a>
-            </li>
-            <li>
-              <a className="text-xs flex justify-between p-1 cursor-pointer">
-                Products
-              </a>
-            </li>
-            <li>
-              <a className="text-xs flex justify-between p-1 cursor-pointer">
-                Sellers
-              </a>
-            </li>
-            <li>
-              <a className="text-xs flex justify-between p-1 cursor-pointer">
-                Customers
-              </a>
-            </li>
-            <li>
-              <a className="text-xs flex justify-between p-1 cursor-pointer">
-                Shops
-              </a>
-            </li>
-          </ul>
-        )}
+        <ul
+          className={`pl-6 mt-1 space-y-1 overflow-hidden transition-all duration-300 ease-in-out ${
+            isDropdownOpen ? "max-h-full" : "max-h-0"
+          }`}
+        >
+          <li>
+            <a className="text-xs flex justify-between p-1 cursor-pointer">
+              Orders
+            </a>
+          </li>
+          <li>
+            <a className="text-xs flex justify-between p-1 cursor-pointer">
+              Order Details
+            </a>
+          </li>
+          <li>
+            <a className="text-xs flex justify-between p-1 cursor-pointer">
+              Products
+            </a>
+          </li>
+          <li>
+            <a className="text-xs flex justify-between p-1 cursor-pointer">
+              Sellers
+            </a>
+          </li>
+          <li>
+            <a className="text-xs flex justify-between p-1 cursor-pointer">
+              Customers
+            </a>
+          </li>
+          <li>
+            <a className="text-xs flex justify-between p-1 cursor-pointer">
+              Shops
+            </a>
+          </li>
+        </ul>
       </div>
 
       {/* File Manager */}

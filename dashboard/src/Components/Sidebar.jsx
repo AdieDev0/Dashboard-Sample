@@ -3,7 +3,11 @@ import layout from "./Assets/layout.png";
 import { MdOutlineScreenshotMonitor } from "react-icons/md";
 import { BsBoxSeam } from "react-icons/bs";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
-import { IoFileTrayOutline, IoChatboxOutline, IoDocumentTextOutline } from "react-icons/io5";
+import {
+  IoFileTrayOutline,
+  IoChatboxOutline,
+  IoDocumentTextOutline,
+} from "react-icons/io5";
 import { RiFilePaper2Line } from "react-icons/ri";
 import { FiBox } from "react-icons/fi";
 import { FaWpforms } from "react-icons/fa";
@@ -39,7 +43,7 @@ const Sidebar = () => {
         >
           <BsBoxSeam />
           <span>Ecommerce</span>
-          <span className="bg-zinc-200 w-9 text-center rounded">Pro</span>
+
           <div className="ml-auto">
             {isDropdownOpen ? (
               <IoIosArrowUp size={15} />
@@ -52,32 +56,32 @@ const Sidebar = () => {
           <ul className="pl-6 mt-1 space-y-1">
             <li>
               <a className="text-xs flex justify-between p-1 cursor-pointer">
-                Orders <span className="bg-zinc-200 w-9 text-center rounded">Pro</span>
+                Orders
               </a>
             </li>
             <li>
               <a className="text-xs flex justify-between p-1 cursor-pointer">
-                Order Details <span className="bg-zinc-200 w-9 text-center rounded">Pro</span>
+                Order Details
               </a>
             </li>
             <li>
               <a className="text-xs flex justify-between p-1 cursor-pointer">
-                Products <span className="bg-zinc-200 w-9 text-center rounded">Pro</span>
+                Products
               </a>
             </li>
             <li>
               <a className="text-xs flex justify-between p-1 cursor-pointer">
-                Sellers <span className="bg-zinc-200 w-9 text-center rounded">Pro</span>
+                Sellers
               </a>
             </li>
             <li>
               <a className="text-xs flex justify-between p-1 cursor-pointer">
-                Customers <span className="bg-zinc-200 w-9 text-center rounded">Pro</span>
+                Customers
               </a>
             </li>
             <li>
               <a className="text-xs flex justify-between p-1 cursor-pointer">
-                Shops <span className="bg-zinc-200 w-9 text-center rounded">Pro</span>
+                Shops
               </a>
             </li>
           </ul>
@@ -125,7 +129,9 @@ const Sidebar = () => {
       <div className="mt-auto text-center items-center text-xs mb-4 border p-3 bg-zinc-200 rounded-md">
         <p>Need Premium?</p>
         <p>Access all features with a single-time purchase</p>
-        <button className="btn btn-outline btn-info text-xs mt-2">Purchase</button>
+        <button className="btn btn-outline btn-info text-xs mt-2">
+          Purchase
+        </button>
       </div>
     </div>
   );

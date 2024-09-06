@@ -9,7 +9,8 @@ import { MdOutlineRemoveRedEye } from "react-icons/md";
 import { CiTrash } from "react-icons/ci";
 import { MdOutlineChat } from "react-icons/md";
 import {
-  AreaChart, Area,
+  AreaChart,
+  Area,
   LineChart,
   Line,
   XAxis,
@@ -54,20 +55,19 @@ const Dashboard = () => {
   return (
     <div className="bg-gray-200 text-black h-auto p-5">
       {/* 4 cards */}
-      <div>
-        <p>Overview</p>
+        <p className="font-semibold">Overview</p>
         {/* cards */}
-        <div className="flex gap-2">
-          <div className="border-2 bg-white w-[313px] p-5 rounded-lg mt-3">
+        <div className="flex gap-4 p-4 overflow-x-auto">
+          {/* Revenue Card */}
+          <div className="bg-white shadow-lg w-[300px] p-5 rounded-lg mt-3 transition-transform transform hover:scale-105 hover:shadow-xl">
             <div className="flex items-center justify-between">
-              <p className="text-gray-500 font-semibold">Revenue</p>
-              <HiOutlineCurrencyDollar className="size-5 opacity-80" />
+              <p className="text-gray-600 font-semibold text-sm">Revenue</p>
+              <HiOutlineCurrencyDollar className="text-gray-600 text-xl" />
             </div>
             <div className="flex gap-3 my-3">
               <p className="text-3xl font-bold">$537.83</p>
-              <p className="flex items-center gap-1 bg-green-100 text-green-700 rounded-2xl px-2 font-semibold">
-                {" "}
-                <IoIosArrowUp /> 10.8%{" "}
+              <p className="flex items-center gap-1 bg-green-100 text-green-700 rounded-full px-3 py-1 text-sm font-semibold">
+                <IoIosArrowUp className="text-green-700" /> 10.8%
               </p>
             </div>
             <div className="my-3">
@@ -76,16 +76,17 @@ const Dashboard = () => {
               </p>
             </div>
           </div>
-          <div className="border-2 bg-white w-[313px] p-5 rounded-lg mt-3">
+
+          {/* Sales Card */}
+          <div className="bg-white shadow-lg w-[300px] p-5 rounded-lg mt-3 transition-transform transform hover:scale-105 hover:shadow-xl">
             <div className="flex items-center justify-between">
-              <p className="text-gray-500 font-semibold">Sales</p>
-              <GrMoney className="size-5 opacity-80" />
+              <p className="text-gray-600 font-semibold text-sm">Sales</p>
+              <GrMoney className="text-gray-600 text-xl" />
             </div>
             <div className="flex gap-3 my-3">
               <p className="text-3xl font-bold">4859</p>
-              <p className="flex items-center gap-1 bg-green-100 text-green-700 rounded-2xl px-2 font-semibold">
-                {" "}
-                <IoIosArrowUp /> 18.2%{" "}
+              <p className="flex items-center gap-1 bg-green-100 text-green-700 rounded-full px-3 py-1 text-sm font-semibold">
+                <IoIosArrowUp className="text-green-700" /> 18.2%
               </p>
             </div>
             <div className="my-3">
@@ -94,16 +95,17 @@ const Dashboard = () => {
               </p>
             </div>
           </div>
-          <div className="border-2 bg-white w-[313px] p-5 rounded-lg mt-3">
+
+          {/* Customer Card */}
+          <div className="bg-white shadow-lg w-[300px] p-5 rounded-lg mt-3 transition-transform transform hover:scale-105 hover:shadow-xl">
             <div className="flex items-center justify-between">
-              <p className="text-gray-500 font-semibold">Customer</p>
-              <MdOutlinePeopleAlt className="size-5 opacity-80" />
+              <p className="text-gray-600 font-semibold text-sm">Customer</p>
+              <MdOutlinePeopleAlt className="text-gray-600 text-xl" />
             </div>
             <div className="flex gap-3 my-3">
               <p className="text-3xl font-bold">2235</p>
-              <p className="flex items-center gap-1 bg-red-100 text-red-700 rounded-2xl px-2 font-semibold">
-                {" "}
-                <IoIosArrowDown /> 12.4%{" "}
+              <p className="flex items-center gap-1 bg-red-100 text-red-700 rounded-full px-3 py-1 text-sm font-semibold">
+                <IoIosArrowDown className="text-red-700" /> 12.4%
               </p>
             </div>
             <div className="my-3">
@@ -112,16 +114,17 @@ const Dashboard = () => {
               </p>
             </div>
           </div>
-          <div className="border-2 bg-white w-[313px] p-5 rounded-lg mt-3">
+
+          {/* Spending Card */}
+          <div className="bg-white shadow-lg w-[300px] p-5 rounded-lg mt-3 transition-transform transform hover:scale-105 hover:shadow-xl">
             <div className="flex items-center justify-between">
-              <p className="text-gray-500 font-semibold">Spending</p>
-              <RiPassPendingLine className="size-5 opacity-80" />
+              <p className="text-gray-600 font-semibold text-sm">Spending</p>
+              <RiPassPendingLine className="text-gray-600 text-xl" />
             </div>
             <div className="flex gap-3 my-3">
               <p className="text-3xl font-bold">$219.65</p>
-              <p className="flex items-center gap-1 bg-green-100 text-green-700 rounded-2xl px-2 font-semibold">
-                {" "}
-                <IoIosArrowUp /> 9.1%{" "}
+              <p className="flex items-center gap-1 bg-green-100 text-green-700 rounded-full px-3 py-1 text-sm font-semibold">
+                <IoIosArrowUp className="text-green-700" /> 9.1%
               </p>
             </div>
             <div className="my-3">
@@ -133,8 +136,8 @@ const Dashboard = () => {
         </div>
 
         {/* charts */}
-        <div className="flex gap-3">
-          <div className="border w-fit bg-white/70 mt-5 p-2 rounded-lg">
+        <div className="flex flex-wrap gap-4 p-4 overflow-x-auto">
+          <div className="border bg-white/70 p-2 rounded-lg flex-shrink-0 w-full max-w-[800px]">
             <LineChart
               width={800}
               height={300}
@@ -160,8 +163,9 @@ const Dashboard = () => {
               <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
             </LineChart>
           </div>
-          {/* bar charts */}
-          <div className="border w-fit bg-white/70 mt-5 p-2 rounded-lg">
+
+          {/* Bar charts */}
+          <div className="border bg-white/70 p-2 rounded-lg flex-shrink-0 w-full max-w-[430px]">
             <BarChart
               width={430}
               height={300}
@@ -368,28 +372,46 @@ const Dashboard = () => {
           </div>
           {/* Top Countries */}
           <div className="mt-5 bg-white rounded-xl">
-          <AreaChart
-          width={430}
-          height={300}
-          data={data}
-          margin={{
-            top: 10,
-            right: 30,
-            left: 0,
-            bottom: 0,
-          }}
-        >
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="name" />
-          <YAxis />
-          <Tooltip />
-          <Area type="monotone" dataKey="uv" stackId="1" stroke="#8884d8" fill="#8884d8" />
-          <Area type="monotone" dataKey="pv" stackId="1" stroke="#82ca9d" fill="#82ca9d" />
-          <Area type="monotone" dataKey="amt" stackId="1" stroke="#ffc658" fill="#ffc658" />
-        </AreaChart>
+            <AreaChart
+              width={430}
+              height={300}
+              data={data}
+              margin={{
+                top: 10,
+                right: 30,
+                left: 0,
+                bottom: 0,
+              }}
+            >
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis dataKey="name" />
+              <YAxis />
+              <Tooltip />
+              <Area
+                type="monotone"
+                dataKey="uv"
+                stackId="1"
+                stroke="#8884d8"
+                fill="#8884d8"
+              />
+              <Area
+                type="monotone"
+                dataKey="pv"
+                stackId="1"
+                stroke="#82ca9d"
+                fill="#82ca9d"
+              />
+              <Area
+                type="monotone"
+                dataKey="amt"
+                stackId="1"
+                stroke="#ffc658"
+                fill="#ffc658"
+              />
+            </AreaChart>
           </div>
         </div>
-      </div>
+      
     </div>
   );
 };
